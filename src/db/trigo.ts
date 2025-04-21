@@ -1,6 +1,11 @@
+/*
+Realizado por Cristian Luque.
+Project Manager: Carolina de Jesus (no le funcionaba el mouse)
+*/
+import { Triangle, Rectangle, Cube } from "../schemas/trigo";
 
 class trigoService{
-    getTriangleSides(){
+    getTriangleSides():Triangle{
         let triangleSides;
 
         do {
@@ -11,14 +16,22 @@ class trigoService{
           triangleSides[1] + triangleSides[2] <= triangleSides[0]
         );
         
-        return triangleSides;
+        return {
+            side1:triangleSides[0],
+            side2:triangleSides[1],
+            side3:triangleSides[2]
+        };
         
     }
-    getRectangleSides(){
-        return Array.from({length:2}, () => Math.random()*10);
+    getRectangleSides():Rectangle{
+        const rectangleSides =Array.from({length:2}, () => Math.random()*10);
+        return {
+            side1:rectangleSides[0],
+            side2:rectangleSides[1]
+        };
     }
-    getCubeSide(){
-        return Math.random()*10;
+    getCubeSide():Cube{
+        return {side1:Math.random()*10};
     }
 }
 

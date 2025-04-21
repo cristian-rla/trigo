@@ -1,3 +1,8 @@
+/*
+Realizado por Cristian Luque.
+Project Manager: Carolina de Jesus (no le funcionaba el mouse)
+*/
+
 import express from 'express'
 import trigoHandler from "../handlers/trigo"
 

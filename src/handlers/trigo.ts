@@ -1,3 +1,8 @@
+/*
+Realizado por Cristian Luque.
+Project Manager: Carolina de Jesus (no le funcionaba el mouse)
+*/
+
 import {Request, Response, NextFunction} from 'express'
 import TrigoController from '../controllers/trigo';
 import { instanceTrigoService } from '../db/trigo';
